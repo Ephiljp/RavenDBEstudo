@@ -1,7 +1,7 @@
-﻿<Application x:Class="RavenDBEstudo.App"
+﻿<Application x:Class="RavenDBTestedeBancoDeDados.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:RavenDBEstudo"
+             xmlns:local="clr-namespace:RavenDBTestedeBancoDeDados"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

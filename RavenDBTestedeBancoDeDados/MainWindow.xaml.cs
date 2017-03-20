@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RavenDBEstudo
+namespace RavenDBTestedeBancoDeDados
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
