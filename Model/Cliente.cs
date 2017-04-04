@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public  class Cliente
+    public  class Cliente :ElementoBase
     {
-        public string Id { get; set; }
 
-        public string Nome { get; set; }
+        public Cliente()
+        {
+            Endereco = new Endereco();
+        }
+
 
         public string CPF { get; set; }
 
@@ -19,6 +22,8 @@ namespace Model
         public string Email { get; set; }
 
         public Endereco Endereco { get; set; }
+
+        public int Idade { get; set; }
 
     }
 }
