@@ -20,7 +20,8 @@
 
 
     <Grid >
-        <Button x:Name="btnListar" Margin="10,10,556,349" BorderThickness="0" Height="21" Background="#00696969" Click="btnListar_Click">
+        
+        <Button x:Name="btnListar" Margin="10,10,726,423" BorderThickness="0" Height="21" Background="#00696969" Click="btnListar_Click">
             <Rectangle Width="22" Height="19"
                 Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                 <Rectangle.OpacityMask>
@@ -42,7 +43,7 @@
             </ListView.View>
         </ListView>
 
-        <Controls:Flyout x:Name="fly" Header="Menu" Position="Left" Width="209" CloseButtonVisibility="Hidden" Background="DimGray">
+        <Controls:Flyout x:Name="fly" Header="Menu" Position="Left" Width="209" CloseButtonVisibility="Hidden" Background="DimGray" Visibility="Hidden">
 
             <StackPanel>
                 <Button x:Name="btnMenuD" Margin="174,-45,1,40" BorderThickness="0" Height="21" Background="DimGray" Click="btnMenu_Click" RenderTransformOrigin="0.5,0.5">

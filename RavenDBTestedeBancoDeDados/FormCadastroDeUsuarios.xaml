@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RavenDBTestedeBancoDeDados"
         mc:Ignorable="d"
-        Title="Cadastro de usuario" Height="460.876" Width="375.381"
+        Title="Cadastro de usuario" Height="446.876" Width="375.381"
         ResizeMode="NoResize"
+        Loaded="Window_Loaded"
         
         >
     <Grid>
@@ -28,8 +29,10 @@
         <TextBox x:Name="txtEstado" HorizontalAlignment="Left" Height="23" Margin="143,324,0,0" TextWrapping="Wrap" Text="{Binding Endereco.Estado}" VerticalAlignment="Top" Width="175"/>
         <TextBlock HorizontalAlignment="Left" Margin="91,331,0,0" TextWrapping="Wrap" Text="Estado:" VerticalAlignment="Top"/>
         <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Height="23" Margin="143,95,0,0" TextWrapping="Wrap" Text="{Binding CPF}" VerticalAlignment="Top" Width="175"/>
-        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="235,369,0,0" VerticalAlignment="Top" Width="83" Height="31" Click="btnSalvar_Click"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="235,365,0,0" VerticalAlignment="Top" Width="83" Height="31" Click="btnSalvar_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="104,133,0,0" TextWrapping="Wrap" Text="Idade:" VerticalAlignment="Top"/>
         <TextBox x:Name="txtIdade" HorizontalAlignment="Left" Height="23" Margin="143,126,0,0" TextWrapping="Wrap" Text="{Binding Idade}" VerticalAlignment="Top" Width="175"/>
+        <ComboBox x:Name="cmbIndicador" ItemsSource="{Binding}" DisplayMemberPath="Nome" SelectedValuePath="Id" HorizontalAlignment="Left" Margin="143,37,0,0" VerticalAlignment="Top" Width="178"/>
+        <TextBlock HorizontalAlignment="Left" Margin="66,47,0,0" TextWrapping="Wrap" Text="Indicado por:" VerticalAlignment="Top"/>
     </Grid>
 </Window>

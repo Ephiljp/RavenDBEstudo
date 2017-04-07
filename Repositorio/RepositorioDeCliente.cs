@@ -10,7 +10,7 @@ namespace Repositorio
 {
     public class RepositorioDeCliente : RepositorioGenerico<Cliente>
     {
-        public List<Cliente>  ConsultePorTermo(string termo)
+        public List<Cliente> ConsultePorTermo(string termo)
         {
             using (IDocumentSession session = store.OpenSession())
             {
@@ -26,6 +26,19 @@ namespace Repositorio
             {
                 return session.Query<Cliente>().Where(x => x.Idade >= idade).ToList();
 
+
+            }
+        }
+
+        public override Cliente Consulte(string IdItem)
+        {
+            using (IDocumentSession session = store.OpenSession())
+            {
+                var cliente = session.Load<Cliente>(IdItem);
+
+                cliente.ClienteIndicador = session.Load<Cliente>(cliente.IndicadorId);
+
+                return cliente;
 
             }
         }

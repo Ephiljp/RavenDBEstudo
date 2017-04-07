@@ -71,6 +71,20 @@ namespace Repositorio
 
         }
 
+        public virtual List<T> Liste()
+        {
+            
+            using (IDocumentSession session = store.OpenSession())
+            {
+                return session
+                    .Query<T>()
+                    .ToList();
+
+
+            }
+
+        }
+
         public virtual List<T> Liste(int pagina, int elementosPorPagina, out RavenQueryStatistics estatistica)
         {
             var quantidadeAPular = (pagina - 1) * elementosPorPagina;

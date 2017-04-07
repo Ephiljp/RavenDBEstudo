@@ -96,6 +96,9 @@ namespace RavenDBTestedeBancoDeDados
                 return;
             }
             var cliente = (Cliente)lstClientes.SelectedItem;
+
+            Repositorio.Consulte(cliente.Id);
+
             ChamaEditorDeCliente(cliente);
 
             Repositorio.Atualizar(cliente);
